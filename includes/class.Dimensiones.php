@@ -11,7 +11,7 @@
         }
 
         public function __get($atributo){
-            return $this->$atributo . " ";
+            return $this->$atributo;
         }
 
         public function __set($atributo,$valor){
@@ -19,15 +19,13 @@
                 $this->$atributo=$valor;
             }
             else{
-                echo "ERROR el dato no puede ser menor a 0";
-                exit;
+                echo "ERROR el dato debe ser de tipo float y no puede ser menor a 1";
+                die();
             }
         }
 
         public function __toString(){
-            echo "alto=" . $this->alto . ",ancho=" . $this->ancho . ",largo=" . $this->largo;
+            return "alto=" . $this->alto . ",ancho=" . $this->ancho . ",largo=" . $this->largo;
         }
-
-
     }   
 ?>
