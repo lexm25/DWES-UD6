@@ -1,5 +1,5 @@
 <?php
-    class Vehiculo{
+    abstract class Vehiculo{
         private string $color;
         private float $peso;
 
@@ -7,9 +7,7 @@
             echo "El vehículo está circulando<br>";
         }
 
-        public function anyadir_persona($peso_persona){
-            $this->peso += $peso_persona;
-        }
+        abstract protected function anyadir_persona($peso_persona);
 
         public function __construct($color,$peso){
             $this->color=$color;
@@ -22,6 +20,13 @@
 
         public function __set($name, $value){
             $this->$name = $value;
+        }
+
+        public static function ver_atributo($object){
+            var_dump($object);
+            foreach ($object as $key) {
+                echo $key . "<br>";
+            }
         }
     }
 ?>

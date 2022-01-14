@@ -28,5 +28,9 @@
                 parent::__set($name,$value);
             }
         }
+
+        public function anyadir_persona($peso_persona){
+            $this->peso += $peso_persona + 1.5;
+        }
     }
 ?>
