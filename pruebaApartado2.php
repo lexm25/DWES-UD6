@@ -1,7 +1,7 @@
 <?php
     //métodos para incluir las clases
     function __autoload($name) {
-        include_once 'includes/class.' . $name . '.php';
+        include_once 'ejercicio9/includes/class.' . $name . '.php';
     }
     //casa
     spl_autoload_register(function($name){include_once('includes/class.' . $name . '.php');});
