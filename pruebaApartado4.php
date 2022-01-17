@@ -1,7 +1,10 @@
 <?php
+    //métodos para incluir las clases
     function __autoload($name) {
         include_once 'includes/class.' . $name . '.php';
     }
+    //casa
+    spl_autoload_register(function($name){include_once('includes/class.' . $name . '.php');});
 
     $dosRuedas = new Dos_Ruedas("transparente",1550,1000);
     $dosRuedas->anyadir_persona(70);

@@ -1,7 +1,11 @@
 <?php
+    //métodos para incluir las clases
     function __autoload($name) {
         include_once 'includes/class.' . $name . '.php';
     }
+    //casa
+    spl_autoload_register(function($name){include_once('includes/class.' . $name . '.php');});
+
     $coche = new Coche('azul',650,2,2);
     $coche->anyadir_persona(700);
     echo "El color del coche es: " . $coche->color . " y el peso es de: " . $coche->peso . "<br>";
