@@ -1,6 +1,6 @@
 <?php
    function __autoload($name) {
-      include_once 'includes/class.' . $name . '.php';
+      include_once 'ejercicio8/class.' . $name . '.php';
    }
 
    // spl_autoload_register(function($name){
