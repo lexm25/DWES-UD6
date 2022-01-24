@@ -17,8 +17,13 @@
 
     function getLibro($id){
         $db = getConnection();
-        $result = $db->query("SELECT titulo, precio FROM libros WHERE id=?");
+        $result = $db->prepare("SELECT titulo, precio FROM libros WHERE id=?");
         $result->bindParam(1,$id);
-        return $result->fetch();
+        $result->execute();
+        $libros = array();
+        while($libro = $result->fetch()){
+            $libros[] = $libro;
+        }
+        return $libros;
     }
 ?>

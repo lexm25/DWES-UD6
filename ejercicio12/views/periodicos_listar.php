@@ -6,14 +6,14 @@
     <h1>Libros dados de alta en nuestra libreria</h1>
     <table border="1">
         <tr>
-            <th>TITULO</th>
-            <th>PRECIO</th>
+            <th>NOMBRE</th>
+            <th>FECHA</th>
         </tr>
-        <?php foreach ($libros as $libro) : ?>
+        <?php foreach ($datos as $valor) : ?>
 
             <tr>
-                <td><?php echo $libro['titulo']; ?></td>
-                <td><?php echo number_format($libro['precio'], 2) ?></td>
+                <td><?php echo $valor['Nombre']; ?></td>
+                <td><?php echo $valor['Fecha']; ?></td>
             </tr>
             
         <?php endforeach; ?>
