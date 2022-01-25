@@ -50,6 +50,9 @@ include "ejercicio1.php";
 
         public function mostrar(){
             Persona::mostrar();
+        }
+        public function mostrarCompleto(){
+            Persona::mostrar();
             echo "su empresa es: $this->empresa"; 
         }
     }
