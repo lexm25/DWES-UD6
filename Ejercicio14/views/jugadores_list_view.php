@@ -37,7 +37,7 @@
                         echo "<td>",$valor["Nacimiento"],"</td>";
                         $id = $valor["id"];
                         echo "<td><a href='index.php?controller=jugadores&action=mostrarJugador&id=$id'>Detalles</a></td>";
-                        echo "<td><a href='edit.php?id=$id'>Editar</a></td>";
+                        echo "<td><a href='index.php?controller=jugadores&action=editarJugador&id=$id'>Editar</a></td>";
                         echo "<td><a href='index.php?controller=jugadores&action=eliminarJugador&id=$id'>Borrando</a></td>";
                         echo "</tr>";
                 }
