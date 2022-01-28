@@ -52,7 +52,6 @@
             return $e->getMessage();
         }
     }
-    editarElemento(1,"José","Los pala","Español",43,123,"2001-12-12","curry.jpg");
     /*devuelva una matriz (array de arrays) con los campos id, texto1, texto2, numero1 y fecha.*/
     function obtenerTodos(){
         try {

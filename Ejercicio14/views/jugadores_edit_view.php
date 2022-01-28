@@ -9,54 +9,13 @@
         <title>Edita elemento</title>
     </head>
     <body>
-    <?php
-        $idJugador = $_GET["id"];
-        $datos = obtenerElemento($idJugador);
-
-        $imagen = $datos["Imagen"];
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $nombre = $_POST["Nombre"];
-            $equipo = $_POST["Equipo"];
-            $nacionalidad = $_POST["Nacionalidad"];
-            $edad = $_POST["Edad"];
-            $altura = $_POST["Altura"];
-            $fechaNacimiento = $_POST["Nacimiento"];
-            
-            $nombre = stripslashes($nombre);
-            $nombre = strip_tags($nombre);
-            $nombre = htmlspecialchars($nombre);
-    
-            $equipo = stripslashes($equipo);
-            $equipo = strip_tags($equipo);
-            $equipo = htmlspecialchars($equipo);
-    
-            $nacionalidad = stripslashes($nacionalidad);
-            $nacionalidad = strip_tags($nacionalidad);
-            $nacionalidad = htmlspecialchars($nacionalidad);
-
-            $target_dir = "images/";
-            $target_file = $target_dir . basename($_FILES["avatar"]["name"]);
-            
-            if($_FILES['avatar']['size']!=0){
-                $file = $_FILES['avatar']['name'];
-                if(editarElemento($datos["id"],$nombre,$equipo,$nacionalidad,$edad,$altura,$fechaNacimiento,$file)){
-                    move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file);
-                    header("Location: views/jugadores_view_view.php?id=$idJugador");
-                }
-            }else{
-                if(editarElemento($datos["id"],$nombre,$equipo,$nacionalidad,$edad,$altura,$fechaNacimiento,$imagen)){
-                    header("Location: views/jugadores_view_view.php?id=$idJugador");
-                }
-            }
-       }
-    ?>
         <nav>
             <ul>
                 <li><a href="#">Nuevo elemento</a></li>
                 <li><a class="active" href="index.php">Lista elementos</a></li>
             </ul>
         </nav>
-        <form class="form-register" method="POST" enctype="multipart/form-data">
+        <form class="form-register" method="POST" enctype="multipart/form-data" action="index.php?controller=jugadores&action=validarEditarJugador">
             <h2 class="form-titulo">DATOS DEL JUGADOR</h2>
             <div class="contenedor-inputs">
                 <input type="hidden" name="id" value="<?php echo $datos["id"]?>">

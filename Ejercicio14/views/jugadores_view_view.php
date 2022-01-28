@@ -11,7 +11,7 @@
     <body>
         <nav>
             <ul>
-                <li><a href="create.php">Nuevo elemento</a></li>
+                <li><a href="">Nuevo elemento</a></li>
                 <li><a class="active" href="index.php">Lista elementos</a></li>
             </ul>
         </nav>  
