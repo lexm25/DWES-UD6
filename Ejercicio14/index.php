@@ -1,8 +1,8 @@
 <?php 
 
     define('CONTROLLERS_FOLDER',"controllers/");
-    define('DEFAULT_CONTROLLER',"jugadores");
-    define('DEFAULT_ACTION',"mostrarTodo");
+    define('DEFAULT_CONTROLLER',"usuarios");
+    define('DEFAULT_ACTION',"ventanaLogin");
 
     $controller = DEFAULT_CONTROLLER;
 

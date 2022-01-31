@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#">Nuevo elemento</a></li>
+            <li><a href="index.php?controller=jugadores&action=validarNuevoJugador">Nuevo elemento</a></li>
             <li><a class="active" href="index.php">Lista elementos</a></li>
         </ul>
         <p>
