@@ -11,7 +11,8 @@
     <nav>
         <ul>
             <li><a href="index.php?controller=jugadores&action=validarNuevoJugador">Nuevo elemento</a></li>
-            <li><a class="active" href="index.php">Lista elementos</a></li>
+            <li><a href="index.php?controller=jugadores&action=mostrarTodo">Lista elementos</a></li>
+                <li><a href="index.php?controller=usuarios&action=cerrarSesion">Cerrar Sesión</a></li>
         </ul>
         <p>
             <?php 

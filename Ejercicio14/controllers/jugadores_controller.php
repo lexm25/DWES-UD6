@@ -1,5 +1,6 @@
 <?php
     session_start();    
+    // Comprobamos si ya hay una sesion activa y redireccionamos en caso afirmativo.
     if(empty($_SESSION['id'])){
         header("Location: index.php");
     }
