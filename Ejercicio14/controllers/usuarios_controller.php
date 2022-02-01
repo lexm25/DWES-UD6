@@ -1,4 +1,6 @@
 <?php
+    session_start();    
+    // Comprobamos si ya hay una sesion activa y redireccionamos en caso afirmativo.
     function ventanaLogin(){
         require 'models/usuarios_model.php';
         $error = "";
@@ -20,7 +22,6 @@
         require 'models/usuarios_model.php';
         session_start();
         if (login($_POST['nombre'], $_POST['pass'])) {
-                echo "mismuerto";
                 $id = getUser($_POST['nombre']);
                 $_SESSION['id'] = $id['id'];
 
